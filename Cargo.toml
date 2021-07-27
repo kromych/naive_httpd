@@ -1,0 +1,24 @@
+[package]
+name = "naive_httpd"
+edition = "2018"
+version = "0.1.0"
+authors = ["kromych"]
+license = "MIT/Apache-2.0"
+readme = "README.md"
+repository = "https://github.com/kromych/naive_httpd"
+description = """
+The final project from The Book.
+"""
+categories = ["development-tools::debugging"]
+keywords = ["http", "threadpool", "book"]
+include = ["src/**/*", "httpd/**/*", "LICENSE-*", "README.md", "CHANGELOG.md"]
+
+[workspace]
+members = [
+    "httpd"
+]
+
+[dependencies]
+httpd = { path = "./httpd" }
+env_logger = "0.9"
+log = { version = "0.4.8", features = ["std"] }
